@@ -1,0 +1,141 @@
+{
+  "params": {
+    "start": "2024-07-01",
+    "end": "2024-12-31",
+    "min_relvol": null,
+    "top_n": null,
+    "capital": 10000,
+    "margin": false
+  },
+  "metrics": {
+    "total_trades": 455,
+    "winning_trades": 63,
+    "losing_trades": 392,
+    "win_rate": 13.85,
+    "hit_ratio_daily": 12.5,
+    "avg_win": 76.89,
+    "avg_loss": -9.25,
+    "profit_factor": 1.34,
+    "total_pnl_net": 1219.42,
+    "max_drawdown_pct": -11.4,
+    "sharpe_ratio": 1.135,
+    "avg_trade_duration_min": 61.6,
+    "avg_trades_per_day": 3.6,
+    "max_trades_per_day": 5,
+    "avg_R_per_trade": 0.1367,
+    "total_R": 62.2,
+    "unique_tickers": 209,
+    "long_trades": 221,
+    "short_trades": 234,
+    "exit_reasons": {
+      "stop": 390,
+      "eod": 65
+    },
+    "avg_capital_used_pct": 99.9,
+    "total_days": 128,
+    "top_winners": {
+      "DLTR": {
+        "trades": 1,
+        "pnl": 1002.66,
+        "avg_relvol": 10.3
+      },
+      "CRWD": {
+        "trades": 4,
+        "pnl": 414.14,
+        "avg_relvol": 7.285
+      },
+      "GLW": {
+        "trades": 4,
+        "pnl": 396.94,
+        "avg_relvol": 6.4925
+      },
+      "TSLA": {
+        "trades": 2,
+        "pnl": 358.70000000000005,
+        "avg_relvol": 2.12
+      },
+      "TGT": {
+        "trades": 4,
+        "pnl": 329.40999999999997,
+        "avg_relvol": 11.8525
+      },
+      "ROST": {
+        "trades": 3,
+        "pnl": 314.59999999999997,
+        "avg_relvol": 7.8500000000000005
+      },
+      "SMCI": {
+        "trades": 8,
+        "pnl": 271.75,
+        "avg_relvol": 3.9774999999999996
+      },
+      "NFLX": {
+        "trades": 1,
+        "pnl": 221.78,
+        "avg_relvol": 12.57
+      },
+      "DECK": {
+        "trades": 2,
+        "pnl": 204.41,
+        "avg_relvol": 8.03
+      },
+      "NUE": {
+        "trades": 2,
+        "pnl": 203.24,
+        "avg_relvol": 7.01
+      }
+    },
+    "top_losers": {
+      "INTC": {
+        "trades": 6,
+        "pnl": -68.33000000000001,
+        "avg_relvol": 3.9133333333333336
+      },
+      "KMX": {
+        "trades": 4,
+        "pnl": -71.78,
+        "avg_relvol": 9.0025
+      },
+      "MTCH": {
+        "trades": 4,
+        "pnl": -73.95,
+        "avg_relvol": 7.965
+      },
+      "STX": {
+        "trades": 3,
+        "pnl": -74.33,
+        "avg_relvol": 7.466666666666666
+      },
+      "WYNN": {
+        "trades": 4,
+        "pnl": -80.44,
+        "avg_relvol": 6.23
+      },
+      "NCLH": {
+        "trades": 7,
+        "pnl": -84.06,
+        "avg_relvol": 3.281428571428571
+      },
+      "ALK": {
+        "trades": 7,
+        "pnl": -87.82000000000001,
+        "avg_relvol": 4.527142857142857
+      },
+      "DXCM": {
+        "trades": 3,
+        "pnl": -94.06,
+        "avg_relvol": 24.540000000000003
+      },
+      "LW": {
+        "trades": 4,
+        "pnl": -98.41,
+        "avg_relvol": 8.66
+      },
+      "MRNA": {
+        "trades": 2,
+        "pnl": -119.27000000000001,
+        "avg_relvol": 13.620000000000001
+      }
+    }
+  }
+}

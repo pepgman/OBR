@@ -1,0 +1,26 @@
+{
+  "periodo": "2024-07-01 -> 2024-12-31",
+  "capital_inicial": 10000,
+  "sin_margen": {
+    "capital_final": 9111.97,
+    "retorno_pct": -8.88,
+    "hit_ratio_diario": 12.5,
+    "win_rate_trade": 12.8,
+    "trades_dia_media": 2.5,
+    "total_trades": 321
+  },
+  "con_margen_4x": {
+    "capital_final": 7002.49,
+    "retorno_pct": -29.98,
+    "hit_ratio_diario": 13.3,
+    "win_rate_trade": 14.0,
+    "trades_dia_media": 2.7,
+    "total_trades": 349
+  },
+  "teorico_R": {
+    "R_medio_trade": -0.1344,
+    "hit_ratio_diario": 28.1,
+    "win_rate_trade": 14.5,
+    "R_total": -4449.4
+  }
+}

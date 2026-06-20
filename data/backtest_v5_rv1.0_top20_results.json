@@ -1,0 +1,141 @@
+{
+  "params": {
+    "start": "2021-07-01",
+    "end": "2024-12-31",
+    "min_relvol": 1.0,
+    "top_n": 20,
+    "capital": 10000000,
+    "margin": false
+  },
+  "metrics": {
+    "total_trades": 4683,
+    "winning_trades": 445,
+    "losing_trades": 4238,
+    "win_rate": 9.5,
+    "hit_ratio_daily": 8.98,
+    "avg_win": 29491.2,
+    "avg_loss": -3957.4,
+    "profit_factor": 0.78,
+    "total_pnl_net": -3647877.78,
+    "max_drawdown_pct": -43.68,
+    "sharpe_ratio": -0.958,
+    "avg_trade_duration_min": 49.9,
+    "avg_trades_per_day": 5.3,
+    "max_trades_per_day": 7,
+    "avg_R_per_trade": -0.1463,
+    "total_R": -685.2,
+    "unique_tickers": 415,
+    "long_trades": 2410,
+    "short_trades": 2273,
+    "exit_reasons": {
+      "stop": 4222,
+      "eod": 461
+    },
+    "avg_capital_used_pct": 100.0,
+    "total_days": 880,
+    "top_winners": {
+      "DLTR": {
+        "trades": 25,
+        "pnl": 977015.1100000001,
+        "avg_relvol": 9.1556
+      },
+      "NEM": {
+        "trades": 8,
+        "pnl": 568164.71,
+        "avg_relvol": 3.2287500000000002
+      },
+      "PARA": {
+        "trades": 34,
+        "pnl": 537479.44,
+        "avg_relvol": 4.02264705882353
+      },
+      "FTNT": {
+        "trades": 14,
+        "pnl": 461389.23000000004,
+        "avg_relvol": 7.32
+      },
+      "FMC": {
+        "trades": 7,
+        "pnl": 423451.41,
+        "avg_relvol": 4.852857142857142
+      },
+      "KR": {
+        "trades": 24,
+        "pnl": 356831.13,
+        "avg_relvol": 4.171666666666667
+      },
+      "ENPH": {
+        "trades": 14,
+        "pnl": 324721.83,
+        "avg_relvol": 7.325714285714286
+      },
+      "IP": {
+        "trades": 21,
+        "pnl": 322631.95,
+        "avg_relvol": 4.443333333333333
+      },
+      "EIX": {
+        "trades": 11,
+        "pnl": 290320.38,
+        "avg_relvol": 18.382727272727273
+      },
+      "TRGP": {
+        "trades": 10,
+        "pnl": 274602.53,
+        "avg_relvol": 4.319
+      }
+    },
+    "top_losers": {
+      "PLTR": {
+        "trades": 31,
+        "pnl": -190693.28,
+        "avg_relvol": 3.6093548387096774
+      },
+      "PANW": {
+        "trades": 27,
+        "pnl": -192826.42,
+        "avg_relvol": 6.742222222222222
+      },
+      "BBWI": {
+        "trades": 25,
+        "pnl": -196756.56,
+        "avg_relvol": 5.6512
+      },
+      "EXPE": {
+        "trades": 17,
+        "pnl": -199692.7,
+        "avg_relvol": 9.867058823529412
+      },
+      "MU": {
+        "trades": 31,
+        "pnl": -218448.86,
+        "avg_relvol": 4.142258064516129
+      },
+      "FSLR": {
+        "trades": 26,
+        "pnl": -233518.15,
+        "avg_relvol": 5.953076923076923
+      },
+      "KMX": {
+        "trades": 17,
+        "pnl": -237295.31,
+        "avg_relvol": 9.92470588235294
+      },
+      "WYNN": {
+        "trades": 29,
+        "pnl": -240494.86,
+        "avg_relvol": 6.134827586206897
+      },
+      "STX": {
+        "trades": 33,
+        "pnl": -244482.49,
+        "avg_relvol": 5.971818181818182
+      },
+      "MRNA": {
+        "trades": 23,
+        "pnl": -307945.66000000003,
+        "avg_relvol": 6.3252173913043475
+      }
+    }
+  }
+}

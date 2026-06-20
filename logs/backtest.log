@@ -1,0 +1,239 @@
+2026-03-23 18:45:38 | INFO     | backtest | ======================================================================
+2026-03-23 18:45:38 | INFO     | backtest | ORB Trading System -- Backtest ORB 30min
+2026-03-23 18:45:38 | INFO     | backtest | ======================================================================
+2026-03-23 18:45:38 | INFO     | backtest | Tickers:         1
+2026-03-23 18:45:38 | INFO     | backtest | Capital:         $10,000
+2026-03-23 18:45:38 | INFO     | backtest | Riesgo/trade:    1.0%
+2026-03-23 18:45:38 | INFO     | backtest | Risk/Reward:     1:2.0
+2026-03-23 18:45:38 | INFO     | backtest | Direccion:       both
+2026-03-23 18:45:38 | INFO     | backtest | Comision IBKR:   $0.005/accion
+2026-03-23 18:45:38 | INFO     | backtest | Slippage:        0.05%
+2026-03-23 18:45:38 | INFO     | backtest | ======================================================================
+2026-03-23 18:45:38 | INFO     | backtest | --- [1/1] TSLA ---
+2026-03-23 18:45:55 | INFO     | backtest |   1217 trades, P&L: $-4,142.25
+2026-03-23 19:32:45 | INFO     | backtest | ======================================================================
+2026-03-23 19:32:45 | INFO     | backtest | ORB Trading System -- Backtest ORB 30min
+2026-03-23 19:32:45 | INFO     | backtest | ======================================================================
+2026-03-23 19:32:45 | INFO     | backtest | Tickers:         50
+2026-03-23 19:32:45 | INFO     | backtest | Capital:         $10,000
+2026-03-23 19:32:45 | INFO     | backtest | Riesgo/trade:    1.0%
+2026-03-23 19:32:45 | INFO     | backtest | Risk/Reward:     1:2.0
+2026-03-23 19:32:45 | INFO     | backtest | Direccion:       both
+2026-03-23 19:32:45 | INFO     | backtest | Comision IBKR:   $0.005/accion
+2026-03-23 19:32:45 | INFO     | backtest | Slippage:        0.05%
+2026-03-23 19:32:45 | INFO     | backtest | ======================================================================
+2026-03-23 19:32:45 | INFO     | backtest | --- [1/50] QQQ ---
+2026-03-23 19:33:05 | INFO     | backtest |   1237 trades, P&L: $-5,114.26
+2026-03-23 19:33:05 | INFO     | backtest | --- [2/50] NVDA ---
+2026-03-23 19:33:24 | INFO     | backtest |   1199 trades, P&L: $-3,339.99
+2026-03-23 19:33:24 | INFO     | backtest | --- [3/50] TSLA ---
+2026-03-23 19:33:43 | INFO     | backtest |   562 trades, P&L: $-1,140.54
+2026-03-23 19:33:43 | INFO     | backtest | --- [4/50] SPY ---
+2026-03-23 19:34:05 | INFO     | backtest |   4 trades, P&L: $-9.11
+2026-03-23 19:34:05 | INFO     | backtest | --- [5/50] MU ---
+2026-03-23 21:41:53 | INFO     | backtest | Grid [1/64] SL:0.1% TP:1.0x
+2026-03-23 21:41:53 | INFO     | backtest | Cargando datos en memoria...
+2026-03-23 21:42:31 | INFO     | backtest |   32,341,435 barras en 37.4s
+2026-03-23 21:42:31 | INFO     | backtest |   41,668 filas diarias
+2026-03-23 21:42:34 | INFO     | backtest | 
+2026-03-23 21:42:34 | INFO     | backtest | ======================================================================
+2026-03-23 21:42:34 | INFO     | backtest | ORB Backtest v2
+2026-03-23 21:42:34 | INFO     | backtest | ======================================================================
+2026-03-23 21:42:34 | INFO     | backtest | Tickers:     50
+2026-03-23 21:42:34 | INFO     | backtest | Dias:        1342
+2026-03-23 21:42:34 | INFO     | backtest | SL:          0.1%
+2026-03-23 21:42:34 | INFO     | backtest | TP:          1.0x SL
+2026-03-23 21:42:34 | INFO     | backtest | Direction:   both
+2026-03-23 21:42:34 | INFO     | backtest | Risk/trade:  1.0%
+2026-03-23 21:42:34 | INFO     | backtest | Capital:     $10,000
+2026-03-23 21:42:34 | INFO     | backtest | ======================================================================
+2026-03-23 21:50:23 | INFO     | backtest | Cargando datos en memoria...
+2026-03-23 21:50:42 | INFO     | backtest |   32,341,435 barras en 18.9s
+2026-03-23 21:50:42 | INFO     | backtest |   41,668 filas diarias
+2026-03-23 21:50:44 | INFO     | backtest | 
+2026-03-23 21:50:44 | INFO     | backtest | ======================================================================
+2026-03-23 21:50:44 | INFO     | backtest | ORB Backtest v2
+2026-03-23 21:50:44 | INFO     | backtest | ======================================================================
+2026-03-23 21:50:44 | INFO     | backtest | Tickers:     50
+2026-03-23 21:50:44 | INFO     | backtest | Dias:        1342
+2026-03-23 21:50:44 | INFO     | backtest | SL:          0.5%
+2026-03-23 21:50:44 | INFO     | backtest | TP:          2.0x SL
+2026-03-23 21:50:44 | INFO     | backtest | Direction:   both
+2026-03-23 21:50:44 | INFO     | backtest | Risk/trade:  1.0%
+2026-03-23 21:50:44 | INFO     | backtest | Capital:     $10,000
+2026-03-23 21:50:44 | INFO     | backtest | ======================================================================
+2026-03-23 22:09:06 | INFO     | backtest | ORB Backtest v3 | SL:0.5% | TP:2.0x | 135 dias | 50 tickers
+2026-03-23 22:11:42 | INFO     | backtest | ORB Backtest v3 | SL:0.5% | TP:2.0x | 135 dias | 50 tickers
+2026-03-23 22:11:59 | INFO     | backtest |   124 trades en 16.7s
+2026-03-23 22:13:13 | INFO     | backtest | ORB Backtest v3 | SL:0.5% | TP:10.0x | 135 dias | 50 tickers
+2026-03-23 22:13:31 | INFO     | backtest |   123 trades en 17.4s
+2026-03-23 22:14:01 | INFO     | backtest | ORB Backtest v3 | SL:0.1% | TP:10.0x | 135 dias | 50 tickers
+2026-03-23 22:14:17 | INFO     | backtest |   124 trades en 16.0s
+2026-03-23 22:20:21 | INFO     | backtest | ORB Backtest v3 | SL:0.5% | TP:2.0x | 134 dias | 50 tickers
+2026-03-23 22:20:40 | INFO     | backtest |   118 trades en 18.8s
+2026-03-23 22:22:08 | INFO     | backtest | ORB Backtest v3 | SL:0.5% | TP:2.0x | 134 dias | 50 tickers
+2026-03-23 22:22:27 | INFO     | backtest |   118 trades en 19.2s
+2026-03-28 02:05:25 | INFO     | backtest | ORB Backtest v4 | SL:0.5% | TP:2.0x | 128 dias | 50 tickers
+2026-03-28 02:05:53 | INFO     | backtest |   118 trades en 27.3s
+2026-03-28 02:08:55 | INFO     | backtest |   Optimizar [1/120] SL:0.1% TP:0.5x
+2026-03-28 02:08:56 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:0.5x | 128 dias | 50 tickers
+2026-03-28 02:09:17 | INFO     | backtest |   119 trades en 21.6s
+2026-03-28 02:09:17 | INFO     | backtest |   Optimizar [2/120] SL:0.1% TP:1.0x
+2026-03-28 02:09:18 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:1.0x | 128 dias | 50 tickers
+2026-03-28 02:09:40 | INFO     | backtest |   119 trades en 22.3s
+2026-03-28 02:09:40 | INFO     | backtest |   Optimizar [3/120] SL:0.1% TP:1.5x
+2026-03-28 02:09:40 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:1.5x | 128 dias | 50 tickers
+2026-03-28 02:10:04 | INFO     | backtest |   119 trades en 24.0s
+2026-03-28 02:10:04 | INFO     | backtest |   Optimizar [4/120] SL:0.1% TP:2.0x
+2026-03-28 02:10:05 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:2.0x | 128 dias | 50 tickers
+2026-03-28 02:10:25 | INFO     | backtest |   119 trades en 20.0s
+2026-03-28 02:10:25 | INFO     | backtest |   Optimizar [5/120] SL:0.1% TP:3.0x
+2026-03-28 02:10:25 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:3.0x | 128 dias | 50 tickers
+2026-03-28 02:10:41 | INFO     | backtest |   119 trades en 16.3s
+2026-03-28 02:10:42 | INFO     | backtest |   Optimizar [6/120] SL:0.1% TP:5.0x
+2026-03-28 02:10:42 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:5.0x | 128 dias | 50 tickers
+2026-03-28 02:10:58 | INFO     | backtest |   119 trades en 16.3s
+2026-03-28 02:10:58 | INFO     | backtest |   Optimizar [7/120] SL:0.1% TP:8.0x
+2026-03-28 02:10:58 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:8.0x | 128 dias | 50 tickers
+2026-03-28 02:11:15 | INFO     | backtest |   119 trades en 16.4s
+2026-03-28 02:11:15 | INFO     | backtest |   Optimizar [8/120] SL:0.1% TP:10.0x
+2026-03-28 02:11:15 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:10.0x | 128 dias | 50 tickers
+2026-03-28 02:11:31 | INFO     | backtest |   119 trades en 16.1s
+2026-03-28 02:11:31 | INFO     | backtest |   Optimizar [9/120] SL:0.1% TP:15.0x
+2026-03-28 02:11:32 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:15.0x | 128 dias | 50 tickers
+2026-03-28 02:11:48 | INFO     | backtest |   119 trades en 16.5s
+2026-03-28 02:11:48 | INFO     | backtest |   Optimizar [10/120] SL:0.1% TP:20.0x
+2026-03-28 02:11:49 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:20.0x | 128 dias | 50 tickers
+2026-03-28 02:12:05 | INFO     | backtest |   119 trades en 16.3s
+2026-03-28 02:12:05 | INFO     | backtest |   Optimizar [11/120] SL:0.1% TP:30.0x
+2026-03-28 02:12:05 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:30.0x | 128 dias | 50 tickers
+2026-03-28 02:12:22 | INFO     | backtest |   119 trades en 16.3s
+2026-03-28 02:12:22 | INFO     | backtest |   Optimizar [12/120] SL:0.1% TP:50.0x
+2026-03-28 02:12:22 | INFO     | backtest | ORB Backtest v4 | SL:0.1% | TP:50.0x | 128 dias | 50 tickers
+2026-03-28 02:12:38 | INFO     | backtest |   119 trades en 16.1s
+2026-03-28 02:12:38 | INFO     | backtest |   Optimizar [13/120] SL:0.2% TP:0.5x
+2026-03-28 02:12:38 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:0.5x | 128 dias | 50 tickers
+2026-03-28 02:12:55 | INFO     | backtest |   119 trades en 16.2s
+2026-03-28 02:12:55 | INFO     | backtest |   Optimizar [14/120] SL:0.2% TP:1.0x
+2026-03-28 02:12:55 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:1.0x | 128 dias | 50 tickers
+2026-03-28 02:13:14 | INFO     | backtest |   119 trades en 18.9s
+2026-03-28 02:13:14 | INFO     | backtest |   Optimizar [15/120] SL:0.2% TP:1.5x
+2026-03-28 02:13:14 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:1.5x | 128 dias | 50 tickers
+2026-03-28 02:13:32 | INFO     | backtest |   119 trades en 17.4s
+2026-03-28 02:13:32 | INFO     | backtest |   Optimizar [16/120] SL:0.2% TP:2.0x
+2026-03-28 02:13:32 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:2.0x | 128 dias | 50 tickers
+2026-03-28 02:13:51 | INFO     | backtest |   119 trades en 18.7s
+2026-03-28 02:13:51 | INFO     | backtest |   Optimizar [17/120] SL:0.2% TP:3.0x
+2026-03-28 02:13:51 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:3.0x | 128 dias | 50 tickers
+2026-03-28 02:14:08 | INFO     | backtest |   119 trades en 16.8s
+2026-03-28 02:14:08 | INFO     | backtest |   Optimizar [18/120] SL:0.2% TP:5.0x
+2026-03-28 02:14:08 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:5.0x | 128 dias | 50 tickers
+2026-03-28 02:14:25 | INFO     | backtest |   119 trades en 16.4s
+2026-03-28 02:14:25 | INFO     | backtest |   Optimizar [19/120] SL:0.2% TP:8.0x
+2026-03-28 02:14:25 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:8.0x | 128 dias | 50 tickers
+2026-03-28 02:14:41 | INFO     | backtest |   119 trades en 16.2s
+2026-03-28 02:14:42 | INFO     | backtest |   Optimizar [20/120] SL:0.2% TP:10.0x
+2026-03-28 02:14:42 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:10.0x | 128 dias | 50 tickers
+2026-03-28 02:14:58 | INFO     | backtest |   119 trades en 16.6s
+2026-03-28 02:14:59 | INFO     | backtest |   Optimizar [21/120] SL:0.2% TP:15.0x
+2026-03-28 02:14:59 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:15.0x | 128 dias | 50 tickers
+2026-03-28 02:15:16 | INFO     | backtest |   119 trades en 16.9s
+2026-03-28 02:15:16 | INFO     | backtest |   Optimizar [22/120] SL:0.2% TP:20.0x
+2026-03-28 02:15:16 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:20.0x | 128 dias | 50 tickers
+2026-03-28 02:15:32 | INFO     | backtest |   119 trades en 16.1s
+2026-03-28 02:15:32 | INFO     | backtest |   Optimizar [23/120] SL:0.2% TP:30.0x
+2026-03-28 02:15:33 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:30.0x | 128 dias | 50 tickers
+2026-03-28 02:15:49 | INFO     | backtest |   118 trades en 16.3s
+2026-03-28 02:15:49 | INFO     | backtest |   Optimizar [24/120] SL:0.2% TP:50.0x
+2026-03-28 02:15:49 | INFO     | backtest | ORB Backtest v4 | SL:0.2% | TP:50.0x | 128 dias | 50 tickers
+2026-03-28 02:16:07 | INFO     | backtest |   118 trades en 17.5s
+2026-03-28 02:16:07 | INFO     | backtest |   Optimizar [25/120] SL:0.3% TP:0.5x
+2026-03-28 02:16:07 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:0.5x | 128 dias | 50 tickers
+2026-03-28 02:16:25 | INFO     | backtest |   119 trades en 17.8s
+2026-03-28 02:16:25 | INFO     | backtest |   Optimizar [26/120] SL:0.3% TP:1.0x
+2026-03-28 02:16:25 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:1.0x | 128 dias | 50 tickers
+2026-03-28 02:16:43 | INFO     | backtest |   119 trades en 18.1s
+2026-03-28 02:16:43 | INFO     | backtest |   Optimizar [27/120] SL:0.3% TP:1.5x
+2026-03-28 02:16:44 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:1.5x | 128 dias | 50 tickers
+2026-03-28 02:17:01 | INFO     | backtest |   119 trades en 17.2s
+2026-03-28 02:17:01 | INFO     | backtest |   Optimizar [28/120] SL:0.3% TP:2.0x
+2026-03-28 02:17:01 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:2.0x | 128 dias | 50 tickers
+2026-03-28 02:17:21 | INFO     | backtest |   119 trades en 19.2s
+2026-03-28 02:17:21 | INFO     | backtest |   Optimizar [29/120] SL:0.3% TP:3.0x
+2026-03-28 02:17:21 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:3.0x | 128 dias | 50 tickers
+2026-03-28 02:17:39 | INFO     | backtest |   119 trades en 18.3s
+2026-03-28 02:17:39 | INFO     | backtest |   Optimizar [30/120] SL:0.3% TP:5.0x
+2026-03-28 02:17:39 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:5.0x | 128 dias | 50 tickers
+2026-03-28 02:17:57 | INFO     | backtest |   119 trades en 17.7s
+2026-03-28 02:17:57 | INFO     | backtest |   Optimizar [31/120] SL:0.3% TP:8.0x
+2026-03-28 02:17:58 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:8.0x | 128 dias | 50 tickers
+2026-03-28 02:18:17 | INFO     | backtest |   119 trades en 19.0s
+2026-03-28 02:18:17 | INFO     | backtest |   Optimizar [32/120] SL:0.3% TP:10.0x
+2026-03-28 02:18:17 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:10.0x | 128 dias | 50 tickers
+2026-03-28 02:18:38 | INFO     | backtest |   119 trades en 21.2s
+2026-03-28 02:18:38 | INFO     | backtest |   Optimizar [33/120] SL:0.3% TP:15.0x
+2026-03-28 02:18:39 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:15.0x | 128 dias | 50 tickers
+2026-03-28 02:19:00 | INFO     | backtest |   118 trades en 21.9s
+2026-03-28 02:19:01 | INFO     | backtest |   Optimizar [34/120] SL:0.3% TP:20.0x
+2026-03-28 02:19:01 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:20.0x | 128 dias | 50 tickers
+2026-03-28 02:19:22 | INFO     | backtest |   118 trades en 21.5s
+2026-03-28 02:19:22 | INFO     | backtest |   Optimizar [35/120] SL:0.3% TP:30.0x
+2026-03-28 02:19:23 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:30.0x | 128 dias | 50 tickers
+2026-03-28 02:19:44 | INFO     | backtest |   118 trades en 21.4s
+2026-03-28 02:19:44 | INFO     | backtest |   Optimizar [36/120] SL:0.3% TP:50.0x
+2026-03-28 02:19:45 | INFO     | backtest | ORB Backtest v4 | SL:0.3% | TP:50.0x | 128 dias | 50 tickers
+2026-03-28 02:20:07 | INFO     | backtest |   118 trades en 21.9s
+2026-03-28 02:20:07 | INFO     | backtest |   Optimizar [37/120] SL:0.4% TP:0.5x
+2026-03-28 02:20:07 | INFO     | backtest | ORB Backtest v4 | SL:0.4% | TP:0.5x | 128 dias | 50 tickers
+2026-03-28 02:20:28 | INFO     | backtest |   119 trades en 20.9s
+2026-03-28 02:20:28 | INFO     | backtest |   Optimizar [38/120] SL:0.4% TP:1.0x
+2026-03-28 02:20:28 | INFO     | backtest | ORB Backtest v4 | SL:0.4% | TP:1.0x | 128 dias | 50 tickers
+2026-03-28 02:20:49 | INFO     | backtest |   119 trades en 20.8s
+2026-03-28 02:20:49 | INFO     | backtest |   Optimizar [39/120] SL:0.4% TP:1.5x
+2026-03-28 02:20:50 | INFO     | backtest | ORB Backtest v4 | SL:0.4% | TP:1.5x | 128 dias | 50 tickers
+2026-03-28 02:21:14 | INFO     | backtest |   119 trades en 24.5s
+2026-03-28 02:21:14 | INFO     | backtest |   Optimizar [40/120] SL:0.4% TP:2.0x
+2026-03-28 02:21:15 | INFO     | backtest | ORB Backtest v4 | SL:0.4% | TP:2.0x | 128 dias | 50 tickers
+2026-03-28 02:21:38 | INFO     | backtest |   119 trades en 23.9s
+2026-03-28 02:21:39 | INFO     | backtest |   Optimizar [41/120] SL:0.4% TP:3.0x
+2026-03-28 02:21:39 | INFO     | backtest | ORB Backtest v4 | SL:0.4% | TP:3.0x | 128 dias | 50 tickers
+2026-03-28 02:22:04 | INFO     | backtest |   119 trades en 24.9s
+2026-03-28 02:22:04 | INFO     | backtest |   Optimizar [42/120] SL:0.4% TP:5.0x
+2026-03-28 02:22:04 | INFO     | backtest | ORB Backtest v4 | SL:0.4% | TP:5.0x | 128 dias | 50 tickers
+2026-03-28 02:22:28 | INFO     | backtest |   119 trades en 23.5s
+2026-03-28 02:22:28 | INFO     | backtest |   Optimizar [43/120] SL:0.4% TP:8.0x
+2026-03-28 02:22:28 | INFO     | backtest | ORB Backtest v4 | SL:0.4% | TP:8.0x | 128 dias | 50 tickers
+2026-03-28 02:22:57 | INFO     | backtest | Preparando datos para optimizacion...
+2026-03-28 02:22:58 | INFO     | backtest | Preparando datos ORB | 128 dias | 50 tickers
+2026-03-28 02:23:23 | INFO     | backtest |   Datos preparados: 128 dias con ORB valido en 25.6s
+2026-03-28 02:23:23 | INFO     | backtest | Datos listos: 128 dias. Probando combinaciones...
+2026-03-28 02:23:25 | INFO     | backtest |   120 combinaciones en 2.2s
+2026-03-28 02:25:57 | INFO     | backtest | Preparando datos ORB | 128 dias | 50 tickers
+2026-03-28 02:26:23 | INFO     | backtest |   Datos preparados: 128 dias con ORB valido en 26.4s
+2026-03-28 02:26:33 | INFO     | backtest | Preparando datos para optimizacion...
+2026-03-28 02:26:33 | INFO     | backtest | Preparando datos ORB | 128 dias | 50 tickers
+2026-03-28 02:26:48 | INFO     | backtest |   Datos preparados: 128 dias con ORB valido en 15.1s
+2026-03-28 02:26:48 | INFO     | backtest | Datos listos: 128 dias. Probando combinaciones...
+2026-03-28 02:26:49 | INFO     | backtest |   120 combinaciones en 1.1s
+2026-03-28 02:28:18 | INFO     | backtest | Preparando datos ORB | 122 dias | 50 tickers
+2026-03-28 02:28:43 | INFO     | backtest |   Datos preparados: 122 dias con ORB valido en 25.0s
+2026-03-28 02:29:56 | INFO     | backtest | Preparando datos ORB | 124 dias | 50 tickers
+2026-03-28 02:30:20 | INFO     | backtest |   Datos preparados: 124 dias con ORB valido en 23.3s
+2026-03-28 02:31:08 | INFO     | backtest | Preparando datos ORB | 126 dias | 50 tickers
+2026-03-28 02:31:34 | INFO     | backtest |   Datos preparados: 126 dias con ORB valido en 25.9s
+2026-03-28 02:32:29 | INFO     | backtest | Preparando datos para optimizacion...
+2026-03-28 02:32:29 | INFO     | backtest | Preparando datos ORB | 124 dias | 50 tickers
+2026-03-28 02:32:57 | INFO     | backtest |   Datos preparados: 124 dias con ORB valido en 27.5s
+2026-03-28 02:32:57 | INFO     | backtest | Datos listos: 124 dias. Probando combinaciones...
+2026-03-28 02:32:59 | INFO     | backtest |   120 combinaciones en 2.2s
+2026-03-28 02:34:55 | INFO     | backtest | Preparando datos ORB | 126 dias | 50 tickers
+2026-03-28 02:35:22 | INFO     | backtest |   Datos preparados: 126 dias con ORB valido en 27.5s
+2026-03-28 02:35:52 | INFO     | backtest | Preparando datos ORB | 122 dias | 50 tickers
+2026-03-28 02:36:23 | INFO     | backtest |   Datos preparados: 122 dias con ORB valido en 30.4s
+2026-03-28 02:38:14 | INFO     | backtest | Preparando datos ORB | 124 dias | 50 tickers
+2026-03-28 02:38:30 | INFO     | backtest |   Datos preparados: 124 dias con ORB valido en 16.0s
+2026-03-28 02:40:15 | INFO     | backtest | Preparando datos para optimizacion...
+2026-03-28 02:40:15 | INFO     | backtest | Preparando datos ORB | 1248 dias | 50 tickers
+2026-03-28 21:55:45 | INFO     | backtest |   Datos preparados: 1228 dias con ORB valido en 69329.9s
+2026-03-28 21:55:45 | INFO     | backtest | Datos listos: 1228 dias. Probando combinaciones...
+2026-03-28 21:55:56 | INFO     | backtest |   120 combinaciones en 11.0s

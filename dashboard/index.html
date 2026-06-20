@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ORB Backtest</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'JetBrains Mono',monospace;background:#080c14;color:#d1d5db;font-size:12px}
+.bar{padding:10px 20px;border-bottom:1px solid #1a2332;display:flex;justify-content:space-between;align-items:center}
+.bar h1{font-size:15px;font-weight:700}.bar h1 span{color:#2563eb}.bar .info{font-size:10px;color:#6b7280}
+.main{max-width:1100px;margin:0 auto;padding:16px}
+.card{background:#0f1520;border:1px solid #1a2332;border-radius:8px;padding:16px;margin-bottom:14px}
+.title{font-size:11px;font-weight:600;color:#6b7280;margin-bottom:10px}
+.p-row{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:10px}
+.p-item{min-width:100px}
+.p-item label{font-size:10px;color:#6b7280;display:block;margin-bottom:3px}
+.p-item input[type=number],.p-item input[type=date]{width:100%;background:#1f2937;border:1px solid #374151;border-radius:4px;padding:6px 8px;color:#d1d5db;font-family:inherit;font-size:12px;text-align:center}
+.p-item input[type=number]:focus,.p-item input[type=date]:focus{outline:none;border-color:#2563eb}
+.p-item .unit{font-size:9px;color:#4b5563;margin-top:2px}
+.presets{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px}
+.preset{padding:4px 10px;border-radius:4px;border:none;cursor:pointer;font-size:10px;font-family:inherit;font-weight:600;background:#1f2937;color:#6b7280;transition:all .1s}
+.preset:hover{background:#374151;color:#d1d5db}
+.preset.on{background:#2563eb33;color:#2563eb}
+.btn{padding:8px 20px;border-radius:6px;border:none;cursor:pointer;font-size:12px;font-family:inherit;font-weight:700;margin-right:6px}
+.btn:disabled{opacity:.4;cursor:wait}
+.btn-run{background:#2563eb;color:#fff}.btn-run:hover:not(:disabled){background:#1d4ed8}
+.btn-opt{background:#7c3aed;color:#fff}.btn-opt:hover:not(:disabled){background:#6d28d9}
+.status{font-size:10px;color:#6b7280;margin-top:6px;min-height:16px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:14px}
+.kpi{background:#0f1520;border:1px solid #1a2332;border-radius:8px;padding:12px;text-align:center}
+.kpi .l{font-size:9px;color:#6b7280;text-transform:uppercase;letter-spacing:1px}
+.kpi .n{font-size:18px;font-weight:700;margin:2px 0}.kpi .s{font-size:9px;color:#6b7280}
+.ch{position:relative;height:220px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1a233233;font-size:11px}.row:last-child{border:none}
+.tw{max-height:350px;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:10px}
+th{text-align:left;padding:6px 4px;color:#6b7280;font-weight:500;position:sticky;top:0;background:#0f1520}
+td{padding:4px;border-bottom:1px solid #1a233222}
+.pos{color:#10b981}.neg{color:#ef4444}
+.b{padding:1px 4px;border-radius:3px;font-size:8px;font-weight:600}
+.bl{background:#10b98122;color:#10b981}.bs{background:#ef444422;color:#ef4444}
+.bt{background:#10b98122;color:#10b981}.bst{background:#ef444422;color:#ef4444}.be{background:#eab30822;color:#eab308}
+.err{background:#ef444411;border:1px solid #ef444433;border-radius:8px;padding:16px;text-align:center;color:#ef4444;margin-bottom:14px}
+.err code{background:#1f2937;padding:2px 6px;border-radius:4px;color:#d1d5db}
+.hide{display:none}
+.opt-box{background:#1f293744;border-radius:6px;padding:12px;margin-top:10px;font-size:10px;color:#6b7280;max-height:300px;overflow:auto;white-space:pre-wrap}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <h1><span>ORB</span> Backtest</h1>
+  <span class="info" id="si">Conectando...</span>
+</div>
+
+<div class="main">
+  <div id="err" class="err hide">No se puede conectar. Ejecuta: <code>python scripts\06_api_server.py</code></div>
+
+  <div class="card">
+    <div class="title">PARAMETROS</div>
+    <div class="p-row">
+      <div class="p-item">
+        <label>Stop Loss (%)</label>
+        <input type="number" id="iSL" value="0.5" min="0.1" max="10" step="0.1">
+        <div class="unit">% del precio entrada</div>
+      </div>
+      <div class="p-item">
+        <label>Take Profit (x)</label>
+        <input type="number" id="iTP" value="2.0" min="0.5" max="50" step="0.5">
+        <div class="unit">multiplo del SL</div>
+      </div>
+      <div class="p-item">
+        <label>Desde</label>
+        <input type="date" id="iS" value="2025-01-01">
+      </div>
+      <div class="p-item">
+        <label>Hasta</label>
+        <input type="date" id="iE" value="2025-06-30">
+      </div>
+      <div style="display:flex;gap:6px;align-items:end">
+        <button class="btn btn-run" id="btnRun" onclick="run()">Ejecutar</button>
+        <button class="btn btn-opt" id="btnOpt" onclick="optimize()">Optimizar SL/TP</button>
+      </div>
+    </div>
+    <div class="title" style="margin-top:6px">PERIODO</div>
+    <div class="presets" id="presets"></div>
+    <div class="status" id="st"></div>
+    <div id="optBox" class="opt-box hide"></div>
+  </div>
+
+  <div id="res" class="hide">
+    <div class="kpis" id="kpis"></div>
+    <div class="card"><div class="title">EQUITY CURVE</div><div class="ch"><canvas id="cEq"></canvas></div></div>
+    <div class="split">
+      <div class="card"><div class="title">TICKER SELECCIONADO (orb_score)</div><div id="tkList"></div></div>
+      <div class="card"><div class="title">SALIDAS</div><div id="exList"></div></div>
+    </div>
+    <div class="card"><div class="title">P&L MENSUAL</div><div class="ch" style="height:160px"><canvas id="cMo"></canvas></div></div>
+    <div class="card"><div class="title" id="trT">TRADES</div><div class="tw"><table><thead id="trH"></thead><tbody id="trB"></tbody></table></div></div>
+  </div>
+</div>
+
+<script>
+const API="http://localhost:5000/api";
+let c1=null,c2=null;
+
+// Presets
+const P=[];
+const now=new Date();
+const fmt=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const td=fmt(now);
+let d3=new Date(now);d3.setMonth(d3.getMonth()-3);
+let d6=new Date(now);d6.setMonth(d6.getMonth()-6);
+P.push({l:'3M',s:fmt(d3),e:td});
+P.push({l:'6M',s:fmt(d6),e:td});
+for(let y=2022;y<=2026;y++){
+  P.push({l:'H1 '+y,s:y+'-01-01',e:y+'-06-30'});
+  if(y<2026)P.push({l:'H2 '+y,s:y+'-07-01',e:y+'-12-31'});
+}
+document.getElementById('presets').innerHTML=P.map((p,i)=>
+  `<button class="preset" onclick="setP(${i})">${p.l}</button>`
+).join('');
+
+function setP(i){
+  document.querySelectorAll('.preset').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.preset')[i].classList.add('on');
+  document.getElementById('iS').value=P[i].s;
+  document.getElementById('iE').value=P[i].e;
+}
+
+async function init(){
+  try{
+    const r=await fetch(API+'/health');const d=await r.json();
+    document.getElementById('si').textContent=`${(d.prices_1min||0).toLocaleString()} barras | ${d.universe_selected||0} tickers`;
+    document.getElementById('err').classList.add('hide');
+    if(d.bt_trades>0)loadRes();
+  }catch(e){document.getElementById('err').classList.remove('hide');document.getElementById('si').textContent='Desconectado'}
+}
+
+async function run(){
+  const btn=document.getElementById('btnRun');
+  const st=document.getElementById('st');
+  btn.disabled=true;btn.textContent='...';
+  st.textContent='Ejecutando backtest...';st.style.color='#6b7280';
+  document.getElementById('optBox').classList.add('hide');
+  try{
+    const r=await fetch(API+'/backtest/run',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({sl:parseFloat(document.getElementById('iSL').value),tp:parseFloat(document.getElementById('iTP').value),
+        start:document.getElementById('iS').value||null,end:document.getElementById('iE').value||null})});
+    const d=await r.json();
+    if(d.status==='ok'){st.textContent='Completado';st.style.color='#10b981';loadRes()}
+    else{st.textContent='Error: '+(d.stderr||d.message||'').slice(0,300);st.style.color='#ef4444'}
+  }catch(e){st.textContent='Error: '+e.message;st.style.color='#ef4444'}
+  finally{btn.disabled=false;btn.textContent='Ejecutar'}
+}
+
+async function optimize(){
+  const btn=document.getElementById('btnOpt');
+  const st=document.getElementById('st');
+  const ob=document.getElementById('optBox');
+  btn.disabled=true;btn.textContent='Optimizando...';
+  st.textContent='Probando 120 combinaciones de SL x TP... (puede tardar unos minutos)';st.style.color='#eab308';
+  ob.classList.remove('hide');ob.textContent='Iniciando optimizacion...\n';
+  try{
+    const r=await fetch(API+'/backtest/optimize',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({start:document.getElementById('iS').value||null,end:document.getElementById('iE').value||null})});
+    const d=await r.json();
+    if(d.status==='ok'){
+      st.textContent='Optimizacion completada';st.style.color='#10b981';
+      ob.textContent=d.stdout||'Sin output';
+      // Extraer mejor SL/TP del output
+      const m=d.stdout.match(/MEJOR: SL:([\d.]+)% TP:([\d.]+)x/);
+      if(m){document.getElementById('iSL').value=m[1];document.getElementById('iTP').value=m[2]}
+      loadRes();
+    }else{st.textContent='Error';st.style.color='#ef4444';ob.textContent=d.stderr||d.message||'Error'}
+  }catch(e){st.textContent='Error: '+e.message;st.style.color='#ef4444';ob.textContent=e.message}
+  finally{btn.disabled=false;btn.textContent='Optimizar SL/TP'}
+}
+
+async function loadRes(){
+  try{
+    const[m,eq,mo,tr,bt,br]=await Promise.all([
+      fetch(API+'/metrics').then(r=>r.json()),fetch(API+'/equity').then(r=>r.json()),
+      fetch(API+'/monthly').then(r=>r.json()),fetch(API+'/trades').then(r=>r.json()),
+      fetch(API+'/stats/by_ticker').then(r=>r.json()),fetch(API+'/stats/by_reason').then(r=>r.json()),
+    ]);
+    const eqD=eq.equity||[],moD=mo.monthly||[],trD=tr.trades||[],btD=bt.by_ticker||[],brD=br.by_reason||[];
+    const ic=eq.initial_capital||10000,fc=eq.final_capital||ic;
+    if(!trD.length){document.getElementById('res').classList.add('hide');return}
+    document.getElementById('res').classList.remove('hide');
+    const rp=((fc-ic)/ic*100);
+    const pc=v=>v>=0?'#10b981':'#ef4444';
+    const wc=v=>v>=50?'#10b981':v>=40?'#eab308':'#ef4444';
+    const ks=[
+      {l:'P&L',v:'$'+(m.total_pnl_net||0).toFixed(0),c:pc(m.total_pnl_net),s:(rp>0?'+':'')+rp.toFixed(1)+'%'},
+      {l:'Win Rate',v:(m.win_rate||0).toFixed(1)+'%',c:wc(m.win_rate)},
+      {l:'Profit Factor',v:(m.profit_factor||0).toFixed(2),c:m.profit_factor>=1.5?'#10b981':m.profit_factor>=1?'#eab308':'#ef4444'},
+      {l:'Sharpe',v:(m.sharpe_ratio||0).toFixed(2),c:m.sharpe_ratio>=1?'#10b981':m.sharpe_ratio>=0?'#eab308':'#ef4444'},
+      {l:'Max DD',v:(m.max_drawdown_pct||0).toFixed(1)+'%',c:m.max_drawdown_pct>-10?'#10b981':m.max_drawdown_pct>-25?'#eab308':'#ef4444'},
+      {l:'Trades',v:m.total_trades||0,c:'#d1d5db',s:(m.winning_trades||0)+'W/'+(m.losing_trades||0)+'L'},
+    ];
+    document.getElementById('kpis').innerHTML=ks.map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="n" style="color:${k.c}">${k.v}</div>${k.s?'<div class="s">'+k.s+'</div>':''}</div>`).join('');
+    
+    if(c1)c1.destroy();
+    c1=new Chart(document.getElementById('cEq').getContext('2d'),{type:'line',
+      data:{labels:eqD.map(e=>e.date),datasets:[
+        {data:eqD.map(e=>e.equity),borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.1)',fill:true,tension:.1,pointRadius:0,borderWidth:1.5},
+        {data:Array(eqD.length).fill(ic),borderColor:'#6b7280',borderDash:[5,5],borderWidth:1,pointRadius:0,fill:false}
+      ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+        scales:{x:{ticks:{color:'#6b7280',font:{size:8},maxTicksLimit:8},grid:{color:'#1a233244'}},y:{ticks:{color:'#6b7280',font:{size:9}},grid:{color:'#1a233244'}}}}});
+    
+    document.getElementById('tkList').innerHTML=btD.slice(0,10).map(t=>
+      `<div class="row"><span style="font-weight:600">${t.ticker}</span><span>${t.trades} tr</span><span>WR:${t.wr}%</span><span class="${t.pnl>=0?'pos':'neg'}" style="font-weight:700">$${t.pnl>0?'+':''}${t.pnl.toFixed(0)}</span></div>`
+    ).join('');
+    
+    document.getElementById('exList').innerHTML=brD.map(r=>{
+      const cl=r.reason==='target'?'#10b981':r.reason==='stop'?'#ef4444':'#eab308';
+      return`<div class="row"><span style="color:${cl};font-weight:600;text-transform:uppercase">${r.reason}</span><span>${r.count} tr</span><span class="${r.pnl>=0?'pos':'neg'}" style="font-weight:700">$${r.pnl>0?'+':''}${r.pnl.toFixed(0)}</span><span style="color:#6b7280">avg $${(r.avg_pnl||0).toFixed(1)}</span></div>`;
+    }).join('');
+    
+    if(c2)c2.destroy();
+    c2=new Chart(document.getElementById('cMo').getContext('2d'),{type:'bar',
+      data:{labels:moD.map(m=>m.month),datasets:[{data:moD.map(m=>m.pnl),backgroundColor:moD.map(m=>m.pnl>=0?'#10b981':'#ef4444'),borderRadius:3}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+        scales:{x:{ticks:{color:'#6b7280',font:{size:8}},grid:{color:'#1a233222'}},y:{ticks:{color:'#6b7280',font:{size:9}},grid:{color:'#1a233222'}}}}});
+    
+    document.getElementById('trT').textContent='TRADES ('+trD.length+')';
+    document.getElementById('trH').innerHTML='<tr>'+['#','Fecha','Ticker','Dir','Entry','SL','Exit','Shares','P&L','Salida'].map(h=>'<th>'+h+'</th>').join('')+'</tr>';
+    document.getElementById('trB').innerHTML=trD.slice(-150).reverse().map((t,i)=>`<tr style="background:${i%2?'#1f293711':'transparent'}">
+      <td style="color:#6b7280">${t.trade_id}</td><td>${(t.date||'').slice(0,10)}</td>
+      <td style="font-weight:600">${t.ticker}</td>
+      <td><span class="b b${(t.direction||'')[0].toLowerCase()}">${t.direction}</span></td>
+      <td>$${(t.entry_price||0).toFixed(2)}</td><td style="color:#6b7280">$${(t.stop_loss||0).toFixed(2)}</td>
+      <td>$${(t.exit_price||0).toFixed(2)}</td><td>${t.shares}</td>
+      <td style="font-weight:700" class="${(t.pnl_net||0)>=0?'pos':'neg'}">$${t.pnl_net>0?'+':''}${(t.pnl_net||0).toFixed(2)}</td>
+      <td><span class="b b${(t.reason_exit||'')[0]==='t'?'t':t.reason_exit==='stop'?'st':'e'}">${t.reason_exit}</span></td></tr>`).join('');
+  }catch(e){console.error(e)}
+}
+
+init();
+</script>
+</body>
+</html>

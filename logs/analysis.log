@@ -1,0 +1,97 @@
+2026-03-23 19:41:24 | INFO     | analysis | Tickers en universo: 50
+2026-03-23 19:41:25 | INFO     | analysis | Meses disponibles: 60 (2021-04 -> 2026-03)
+2026-03-23 19:41:25 | INFO     | analysis | 
+2026-03-23 19:41:25 | INFO     | analysis | ======================================================================
+2026-03-23 19:41:25 | INFO     | analysis | ANALISIS DE CRITERIOS DE SELECCION
+2026-03-23 19:41:25 | INFO     | analysis | Lookback: 6 meses | Re-seleccion: mensual
+2026-03-23 19:41:25 | INFO     | analysis | Periodo test: 2021-10 -> 2026-03
+2026-03-23 19:41:25 | INFO     | analysis | ======================================================================
+2026-03-23 19:41:25 | INFO     | analysis | [1/54] Test: 2021-10 | Lookback: 2021-04-2021-09 | ETA: 0min
+2026-03-23 19:42:47 | INFO     | analysis | [2/54] Test: 2021-11 | Lookback: 2021-05-2021-10 | ETA: 36min
+2026-03-23 19:44:02 | INFO     | analysis | [3/54] Test: 2021-12 | Lookback: 2021-06-2021-11 | ETA: 45min
+2026-03-23 19:45:13 | INFO     | analysis | [4/54] Test: 2022-01 | Lookback: 2021-07-2021-12 | ETA: 48min
+2026-03-23 19:46:23 | INFO     | analysis | [5/54] Test: 2022-02 | Lookback: 2021-08-2022-01 | ETA: 49min
+2026-03-23 19:47:25 | INFO     | analysis | [6/54] Test: 2022-03 | Lookback: 2021-09-2022-02 | ETA: 48min
+2026-03-23 19:48:25 | INFO     | analysis | [7/54] Test: 2022-04 | Lookback: 2021-10-2022-03 | ETA: 47min
+2026-03-23 19:49:23 | INFO     | analysis | [8/54] Test: 2022-05 | Lookback: 2021-11-2022-04 | ETA: 46min
+2026-03-23 19:50:20 | INFO     | analysis | [9/54] Test: 2022-06 | Lookback: 2021-12-2022-05 | ETA: 45min
+2026-03-23 19:51:22 | INFO     | analysis | [10/54] Test: 2022-07 | Lookback: 2022-01-2022-06 | ETA: 44min
+2026-03-23 19:52:29 | INFO     | analysis | [11/54] Test: 2022-08 | Lookback: 2022-02-2022-07 | ETA: 43min
+2026-03-23 19:53:43 | INFO     | analysis | [12/54] Test: 2022-09 | Lookback: 2022-03-2022-08 | ETA: 43min
+2026-03-23 19:55:02 | INFO     | analysis | [13/54] Test: 2022-10 | Lookback: 2022-04-2022-09 | ETA: 43min
+2026-03-23 19:56:24 | INFO     | analysis | [14/54] Test: 2022-11 | Lookback: 2022-05-2022-10 | ETA: 43min
+2026-03-23 19:59:02 | INFO     | analysis | [15/54] Test: 2022-12 | Lookback: 2022-06-2022-11 | ETA: 46min
+2026-03-23 20:02:31 | INFO     | analysis | [16/54] Test: 2023-01 | Lookback: 2022-07-2022-12 | ETA: 50min
+2026-03-23 20:05:52 | INFO     | analysis | [17/54] Test: 2023-02 | Lookback: 2022-08-2023-01 | ETA: 53min
+2026-03-23 20:08:51 | INFO     | analysis | [18/54] Test: 2023-03 | Lookback: 2022-09-2023-02 | ETA: 55min
+2026-03-23 20:11:44 | INFO     | analysis | [19/54] Test: 2023-04 | Lookback: 2022-10-2023-03 | ETA: 56min
+2026-03-23 20:13:55 | INFO     | analysis | [20/54] Test: 2023-05 | Lookback: 2022-11-2023-04 | ETA: 55min
+2026-03-23 20:16:37 | INFO     | analysis | Tickers: 50
+2026-03-23 20:16:37 | INFO     | analysis | Cargando datos de 1 minuto en memoria...
+2026-03-23 20:16:54 | INFO     | analysis |   32,341,435 barras cargadas en 17.7s
+2026-03-23 20:16:54 | INFO     | analysis | Cargando datos diarios en memoria...
+2026-03-23 20:16:54 | INFO     | analysis |   41,668 filas cargadas
+2026-03-23 20:17:11 | INFO     | analysis | 
+2026-03-23 20:17:11 | INFO     | analysis | Ejecutando backtest ORB para todos los tickers...
+2026-03-23 21:04:45 | INFO     | analysis |   51122 trades generados en 2854.5s
+2026-03-23 21:04:47 | INFO     | analysis | Meses con trades: 60 (2021-04 -> 2026-03)
+2026-03-23 21:04:47 | INFO     | analysis | 
+2026-03-23 21:04:47 | INFO     | analysis | ======================================================================
+2026-03-23 21:04:47 | INFO     | analysis | ANALISIS DE CRITERIOS DE SELECCION
+2026-03-23 21:04:47 | INFO     | analysis | Lookback: 6 meses | Re-seleccion: mensual
+2026-03-23 21:04:47 | INFO     | analysis | Periodo test: 2021-10 -> 2026-03
+2026-03-23 21:04:47 | INFO     | analysis | ======================================================================
+2026-03-23 21:04:47 | INFO     | analysis |   [1/54] Test: 2021-10 | LB: 2021-04-2021-09 | ETA: 0s
+2026-03-23 21:04:48 | INFO     | analysis |   [2/54] Test: 2021-11 | LB: 2021-05-2021-10 | ETA: 23s
+2026-03-23 21:04:48 | INFO     | analysis |   [3/54] Test: 2021-12 | LB: 2021-06-2021-11 | ETA: 28s
+2026-03-23 21:04:49 | INFO     | analysis |   [4/54] Test: 2022-01 | LB: 2021-07-2021-12 | ETA: 31s
+2026-03-23 21:04:50 | INFO     | analysis |   [5/54] Test: 2022-02 | LB: 2021-08-2022-01 | ETA: 31s
+2026-03-23 21:04:51 | INFO     | analysis |   [6/54] Test: 2022-03 | LB: 2021-09-2022-02 | ETA: 31s
+2026-03-23 21:04:52 | INFO     | analysis |   [7/54] Test: 2022-04 | LB: 2021-10-2022-03 | ETA: 32s
+2026-03-23 21:04:52 | INFO     | analysis |   [8/54] Test: 2022-05 | LB: 2021-11-2022-04 | ETA: 31s
+2026-03-23 21:04:53 | INFO     | analysis |   [9/54] Test: 2022-06 | LB: 2021-12-2022-05 | ETA: 31s
+2026-03-23 21:04:54 | INFO     | analysis |   [10/54] Test: 2022-07 | LB: 2022-01-2022-06 | ETA: 31s
+2026-03-23 21:04:55 | INFO     | analysis |   [11/54] Test: 2022-08 | LB: 2022-02-2022-07 | ETA: 30s
+2026-03-23 21:04:55 | INFO     | analysis |   [12/54] Test: 2022-09 | LB: 2022-03-2022-08 | ETA: 30s
+2026-03-23 21:04:56 | INFO     | analysis |   [13/54] Test: 2022-10 | LB: 2022-04-2022-09 | ETA: 29s
+2026-03-23 21:04:57 | INFO     | analysis |   [14/54] Test: 2022-11 | LB: 2022-05-2022-10 | ETA: 29s
+2026-03-23 21:04:58 | INFO     | analysis |   [15/54] Test: 2022-12 | LB: 2022-06-2022-11 | ETA: 28s
+2026-03-23 21:04:59 | INFO     | analysis |   [16/54] Test: 2023-01 | LB: 2022-07-2022-12 | ETA: 28s
+2026-03-23 21:04:59 | INFO     | analysis |   [17/54] Test: 2023-02 | LB: 2022-08-2023-01 | ETA: 27s
+2026-03-23 21:05:00 | INFO     | analysis |   [18/54] Test: 2023-03 | LB: 2022-09-2023-02 | ETA: 27s
+2026-03-23 21:05:01 | INFO     | analysis |   [19/54] Test: 2023-04 | LB: 2022-10-2023-03 | ETA: 26s
+2026-03-23 21:05:02 | INFO     | analysis |   [20/54] Test: 2023-05 | LB: 2022-11-2023-04 | ETA: 25s
+2026-03-23 21:05:02 | INFO     | analysis |   [21/54] Test: 2023-06 | LB: 2022-12-2023-05 | ETA: 24s
+2026-03-23 21:05:03 | INFO     | analysis |   [22/54] Test: 2023-07 | LB: 2023-01-2023-06 | ETA: 24s
+2026-03-23 21:05:04 | INFO     | analysis |   [23/54] Test: 2023-08 | LB: 2023-02-2023-07 | ETA: 23s
+2026-03-23 21:05:05 | INFO     | analysis |   [24/54] Test: 2023-09 | LB: 2023-03-2023-08 | ETA: 22s
+2026-03-23 21:05:05 | INFO     | analysis |   [25/54] Test: 2023-10 | LB: 2023-04-2023-09 | ETA: 22s
+2026-03-23 21:05:06 | INFO     | analysis |   [26/54] Test: 2023-11 | LB: 2023-05-2023-10 | ETA: 21s
+2026-03-23 21:05:07 | INFO     | analysis |   [27/54] Test: 2023-12 | LB: 2023-06-2023-11 | ETA: 20s
+2026-03-23 21:05:08 | INFO     | analysis |   [28/54] Test: 2024-01 | LB: 2023-07-2023-12 | ETA: 19s
+2026-03-23 21:05:09 | INFO     | analysis |   [29/54] Test: 2024-02 | LB: 2023-08-2024-01 | ETA: 19s
+2026-03-23 21:05:09 | INFO     | analysis |   [30/54] Test: 2024-03 | LB: 2023-09-2024-02 | ETA: 18s
+2026-03-23 21:05:10 | INFO     | analysis |   [31/54] Test: 2024-04 | LB: 2023-10-2024-03 | ETA: 17s
+2026-03-23 21:05:11 | INFO     | analysis |   [32/54] Test: 2024-05 | LB: 2023-11-2024-04 | ETA: 17s
+2026-03-23 21:05:12 | INFO     | analysis |   [33/54] Test: 2024-06 | LB: 2023-12-2024-05 | ETA: 16s
+2026-03-23 21:05:12 | INFO     | analysis |   [34/54] Test: 2024-07 | LB: 2024-01-2024-06 | ETA: 15s
+2026-03-23 21:05:13 | INFO     | analysis |   [35/54] Test: 2024-08 | LB: 2024-02-2024-07 | ETA: 14s
+2026-03-23 21:05:14 | INFO     | analysis |   [36/54] Test: 2024-09 | LB: 2024-03-2024-08 | ETA: 14s
+2026-03-23 21:05:15 | INFO     | analysis |   [37/54] Test: 2024-10 | LB: 2024-04-2024-09 | ETA: 13s
+2026-03-23 21:05:16 | INFO     | analysis |   [38/54] Test: 2024-11 | LB: 2024-05-2024-10 | ETA: 12s
+2026-03-23 21:05:16 | INFO     | analysis |   [39/54] Test: 2024-12 | LB: 2024-06-2024-11 | ETA: 11s
+2026-03-23 21:05:17 | INFO     | analysis |   [40/54] Test: 2025-01 | LB: 2024-07-2024-12 | ETA: 11s
+2026-03-23 21:05:18 | INFO     | analysis |   [41/54] Test: 2025-02 | LB: 2024-08-2025-01 | ETA: 10s
+2026-03-23 21:05:19 | INFO     | analysis |   [42/54] Test: 2025-03 | LB: 2024-09-2025-02 | ETA: 9s
+2026-03-23 21:05:19 | INFO     | analysis |   [43/54] Test: 2025-04 | LB: 2024-10-2025-03 | ETA: 8s
+2026-03-23 21:05:20 | INFO     | analysis |   [44/54] Test: 2025-05 | LB: 2024-11-2025-04 | ETA: 8s
+2026-03-23 21:05:21 | INFO     | analysis |   [45/54] Test: 2025-06 | LB: 2024-12-2025-05 | ETA: 7s
+2026-03-23 21:05:22 | INFO     | analysis |   [46/54] Test: 2025-07 | LB: 2025-01-2025-06 | ETA: 6s
+2026-03-23 21:05:23 | INFO     | analysis |   [47/54] Test: 2025-08 | LB: 2025-02-2025-07 | ETA: 5s
+2026-03-23 21:05:23 | INFO     | analysis |   [48/54] Test: 2025-09 | LB: 2025-03-2025-08 | ETA: 5s
+2026-03-23 21:05:24 | INFO     | analysis |   [49/54] Test: 2025-10 | LB: 2025-04-2025-09 | ETA: 4s
+2026-03-23 21:05:25 | INFO     | analysis |   [50/54] Test: 2025-11 | LB: 2025-05-2025-10 | ETA: 3s
+2026-03-23 21:05:26 | INFO     | analysis |   [51/54] Test: 2025-12 | LB: 2025-06-2025-11 | ETA: 2s
+2026-03-23 21:05:27 | INFO     | analysis |   [52/54] Test: 2026-01 | LB: 2025-07-2025-12 | ETA: 2s
+2026-03-23 21:05:27 | INFO     | analysis |   [53/54] Test: 2026-02 | LB: 2025-08-2026-01 | ETA: 1s
+2026-03-23 21:05:28 | INFO     | analysis |   [54/54] Test: 2026-03 | LB: 2025-09-2026-02 | ETA: 0s
